@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "d0cb5f7fc03d4ec888c381b83ea668bb"
+name = "pictovid"
+handle = "pictovid"
+application_url = "https://central-weed-chain-par.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quickstart-94fcf5e2.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://central-weed-chain-par.trycloudflare.com/auth/callback",
+  "https://central-weed-chain-par.trycloudflare.com/auth/shopify/callback",
+  "https://central-weed-chain-par.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false
