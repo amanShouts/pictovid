@@ -10,4 +10,11 @@ module.exports = {
   globals: {
     shopify: "readonly"
   },
+  plugins: ["@remotion"], // Add the @remotion plugin
+  overrides: [
+    {
+      files: ["remotion/*.{ts,tsx}"],
+      extends: ["plugin:@remotion/recommended"]
+    }
+  ]
 };

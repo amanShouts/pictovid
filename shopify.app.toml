@@ -3,7 +3,7 @@
 client_id = "d0cb5f7fc03d4ec888c381b83ea668bb"
 name = "pictovid"
 handle = "pictovid"
-application_url = "https://central-weed-chain-par.trycloudflare.com"
+application_url = "https://conversion-spiritual-agreement-house.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://central-weed-chain-par.trycloudflare.com/auth/callback",
-  "https://central-weed-chain-par.trycloudflare.com/auth/shopify/callback",
-  "https://central-weed-chain-par.trycloudflare.com/api/auth/callback"
+  "https://conversion-spiritual-agreement-house.trycloudflare.com/auth/callback",
+  "https://conversion-spiritual-agreement-house.trycloudflare.com/auth/shopify/callback",
+  "https://conversion-spiritual-agreement-house.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

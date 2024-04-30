@@ -28,9 +28,11 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
+        {/* <Provider config={config}> */}
+          <Outlet />
+          <ScrollRestoration />
+          <Scripts />
+        {/* </Provider> */}
       </body>
     </html>
   );

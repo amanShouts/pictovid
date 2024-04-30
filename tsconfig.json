@@ -1,5 +1,14 @@
 {
-  "include": ["env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "env.d.ts",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "app/remotion/index.js",
+    "app/remotion/Root.jsx",
+    "app/remotion/Composition.jsx"
+, "app/components/MyPlayer.jsx"  ],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "strict": true,
@@ -19,8 +28,6 @@
     "paths": {
       "~/*": ["./app/*"]
     },
-    "types": [
-      "node", "@shopify/app-bridge-types"
-    ]
+    "types": ["node", "@shopify/app-bridge-types"]
   }
 }

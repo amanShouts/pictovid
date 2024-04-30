@@ -7,19 +7,35 @@ import {
   Text,
   BlockStack,
   InlineStack,
-  Card
+  Card,
+  Button
 } from '@shopify/polaris';
 
-export function MainPage({setImages}) {
+export default function MainPage({ setImages, setPicker }) {
 
   const [files, setFiles] = useState([]);
   const [rejectedFiles, setRejectedFiles] = useState([]);
   const hasError = rejectedFiles.length > 0;
 
   const handleDrop = (_droppedFiles, acceptedFiles, rejectedFiles) => {
+    setPicker(false);
     setFiles((files) => [...files, ...acceptedFiles]);
     setImages((files) => [...files, ...acceptedFiles]);
     setRejectedFiles(rejectedFiles);
+  }
+
+  const handleResourcePicker = async () => {
+    setPicker(true);
+    const products = await window.shopify.resourcePicker({
+      type: "product",
+      multiple: true,
+      action: "select",
+    });
+    // console.log(products)
+
+    const imagesUrl = products.map((elem) => elem.images[0].originalSrc);
+    console.log(imagesUrl);
+    setImages(prev => imagesUrl)
   }
 
   const fileUpload = !files.length && <DropZone.FileUpload />;
@@ -56,16 +72,18 @@ export function MainPage({setImages}) {
     </Banner>
   );
 
-  console.log(files , " files -------")
+  console.log(files, " files -------")
   return (
-    <div style={{ backgroundColor: 'gray' }} className="bg-slate-600">
-      <BlockStack vertical>
+    <div className="flex flex-col gap-4">
+      <BlockStack vertical='true'>
         {errorMessage}
         <DropZone accept="image/*" type="image" onDrop={handleDrop}>
           {uploadedFiles}
           {fileUpload}
+          {/* <DropZone.fileUpload /> */}
         </DropZone>
       </BlockStack>
+      <Button onClick={handleResourcePicker} fullWidth >Select Products</Button>
     </div>
   )
 }
