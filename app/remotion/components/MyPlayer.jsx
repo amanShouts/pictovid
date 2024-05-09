@@ -1,8 +1,7 @@
 import { Player } from "@remotion/player";
 import { MyComposition } from "../Composition";
+import { STILL_DURATION, TRANSITION_DURATION } from "../Root";
 
-export const STILL_DURATION = 30; // 10 frames
-export const TRANSITION_DURATION = 20 // transition time, nuber of frames ? 
 const VIDEO_PLAYER_SIZE_FACTOR = 4; 
 
 const MyPlayer = ({ imageBlobs, text }) => {

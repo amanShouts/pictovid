@@ -1,8 +1,8 @@
 import { Sequence, Img, AbsoluteFill } from "remotion";
 import { linearTiming, TransitionSeries } from "@remotion/transitions";
 import { slide, } from "@remotion/transitions/slide";
-import { STILL_DURATION, TRANSITION_DURATION } from "./components/MyPlayer";
 import { Text } from "./components/Text";
+import { STILL_DURATION, TRANSITION_DURATION } from "./Root";
 
 export const MyComposition = ({ imageBlobs, text }) => {
   return (<>

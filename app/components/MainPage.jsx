@@ -6,7 +6,6 @@ import {
   List,
   Text,
   BlockStack,
-  InlineStack,
   Card,
   Button
 } from '@shopify/polaris';
